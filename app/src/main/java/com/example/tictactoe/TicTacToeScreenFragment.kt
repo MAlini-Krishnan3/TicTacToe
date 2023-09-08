@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
+import androidx.databinding.DataBindingUtil
 import com.example.tictactoe.databinding.FragmentFirstBinding
 
 class TicTacToeScreenFragment : Fragment() {
@@ -25,22 +26,14 @@ class TicTacToeScreenFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
-        return binding.root
+        _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_first, container, false)
+        binding.ticTactToeFrag = this
 
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.button00.setOnClickListener { cellClicked(it) }
-        binding.button01.setOnClickListener { cellClicked(it) }
-        binding.button02.setOnClickListener { cellClicked(it) }
-        binding.button10.setOnClickListener { cellClicked(it) }
-        binding.button11.setOnClickListener { cellClicked(it) }
-        binding.button12.setOnClickListener { cellClicked(it) }
-        binding.button20.setOnClickListener { cellClicked(it) }
-        binding.button21.setOnClickListener { cellClicked(it) }
-        binding.button22.setOnClickListener { cellClicked(it) }
     }
 
     private fun checkWinner(): Boolean {

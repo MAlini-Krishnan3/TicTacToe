@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
@@ -20,14 +22,19 @@ class TicTacToeScreenFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
+    private var scaleUp: Animation? = null
+    private var scaleDown: Animation? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_first, container, false)
         binding.ticTactToeFrag = this
+
+        scaleUp = AnimationUtils.loadAnimation(context, R.anim.pop_scale_up)
+        scaleDown = AnimationUtils.loadAnimation(context, R.anim.pop_scale_down)
 
         return binding.root
     }
@@ -105,8 +112,24 @@ class TicTacToeScreenFragment : Fragment() {
         return true
     }
 
+    //onClick function
     fun cellClicked(view: View) {
         val button = view as Button
+        //animation of pop up and down when clicked:
+        button.let {
+
+            scaleUp?.let { scaleUpAnim ->
+                it.startAnimation(scaleUpAnim)
+            }
+
+            // Delay and then scale down
+            it.postDelayed({
+                scaleDown?.let { scaleDownAnim ->
+                    it.startAnimation(scaleDownAnim)
+                }
+            }, 150)
+        }
+
         val row = button.tag.toString()[0].toString().toInt()
         val col = button.tag.toString()[1].toString().toInt()
 

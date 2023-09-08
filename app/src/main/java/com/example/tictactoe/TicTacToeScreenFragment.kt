@@ -9,9 +9,6 @@ import android.widget.Button
 import android.widget.Toast
 import com.example.tictactoe.databinding.FragmentFirstBinding
 
-/**
- * A simple [Fragment] subclass as the default destination in the navigation.
- */
 class TicTacToeScreenFragment : Fragment() {
 
     private var _binding: FragmentFirstBinding? = null
@@ -26,7 +23,7 @@ class TicTacToeScreenFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
         return binding.root
@@ -49,7 +46,37 @@ class TicTacToeScreenFragment : Fragment() {
     private fun checkWinner(): Boolean {
         // Check rows, columns, and diagonals
         // Return true if there's a winner, else false
-        // (Implement your logic here)
+        // Check rows
+        for (i in 0..2) {
+            if (gameState[i][0] == gameState[i][1] &&
+                gameState[i][1] == gameState[i][2] &&
+                gameState[i][0] != 0
+            ) {
+                return true
+            }
+        }
+        // Check columns
+        for (i in 0..2) {
+            if (gameState[0][i] == gameState[1][i] &&
+                gameState[1][i] == gameState[2][i] &&
+                gameState[0][i] != 0
+            ) {
+                return true
+            }
+        }
+        // Check diagonals
+        if (gameState[0][0] == gameState[1][1] &&
+            gameState[1][1] == gameState[2][2] &&
+            gameState[0][0] != 0
+        ) {
+            return true
+        }
+        if (gameState[0][2] == gameState[1][1] &&
+            gameState[1][1] == gameState[2][0] &&
+            gameState[0][2] != 0
+        ) {
+            return true
+        }
 
         return false
     }
@@ -74,6 +101,17 @@ class TicTacToeScreenFragment : Fragment() {
         }
     }
 
+    private fun isBoardFull(): Boolean {
+        for (i in 0..2) {
+            for (j in 0..2) {
+                if (gameState[i][j] == 0) {
+                    return false
+                }
+            }
+        }
+        return true
+    }
+
     fun cellClicked(view: View) {
         val button = view as Button
         val row = button.tag.toString()[0].toString().toInt()
@@ -85,6 +123,12 @@ class TicTacToeScreenFragment : Fragment() {
 
             if (checkWinner()) {
                 Toast.makeText(context, "Player $activePlayer wins!", Toast.LENGTH_SHORT).show()
+                initializeGame()
+                return
+            }
+
+            if (isBoardFull()) {
+                Toast.makeText(context, "It's a draw!", Toast.LENGTH_SHORT).show()
                 initializeGame()
                 return
             }

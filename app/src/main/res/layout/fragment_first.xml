@@ -26,7 +26,6 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:background="@android:color/white"
-            android:onClick="cellClicked"
             android:tag="00" />
 
         <Button
@@ -36,7 +35,6 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:background="@android:color/white"
-            android:onClick="cellClicked"
             android:tag="01" />
 
         <Button
@@ -46,7 +44,6 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:background="@android:color/white"
-            android:onClick="cellClicked"
             android:tag="02" />
 
         <!-- Row 2 -->
@@ -57,7 +54,6 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:background="@android:color/white"
-            android:onClick="cellClicked"
             android:tag="10" />
 
         <Button
@@ -95,7 +91,6 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:background="@android:color/white"
-            android:onClick="cellClicked"
             android:tag="21" />
 
         <Button
@@ -105,7 +100,6 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:background="@android:color/white"
-            android:onClick="cellClicked"
             android:tag="22" />
 
     </GridLayout>

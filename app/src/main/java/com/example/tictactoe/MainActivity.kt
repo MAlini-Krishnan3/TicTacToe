@@ -2,8 +2,6 @@ package com.example.tictactoe
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
 import com.example.tictactoe.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -24,10 +22,6 @@ class MainActivity : AppCompatActivity() {
                 .replace(binding.fragmentContainer.id, TicTacToeScreenFragment())
                 .commit()
         }
-//        binding.fab.setOnClickListener { view ->
-//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                .setAction("Action", null).show()
-//        }
     }
 
 }

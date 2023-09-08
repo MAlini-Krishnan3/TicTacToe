@@ -1,3 +1,7 @@
 <resources>
     <dimen name="fab_margin">48dp</dimen>
+    <dimen name= "heading_text_size">20sp</dimen>
+    <dimen name="tic_tac_text_size">25sp</dimen>
+    <dimen name="tic_tac_toe_margin">30dp</dimen>
+    <dimen name="heading_margin">60dp</dimen>
 </resources>

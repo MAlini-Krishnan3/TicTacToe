@@ -25,6 +25,7 @@
             android:text="@string/headingText"
             android:textAlignment="center"
             android:textSize="@dimen/heading_text_size"
+            app:fontFamily="@font/comic_neue_regular"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -53,7 +54,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1">
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.example.tictactoe.views.TicTacToeButton
                     android:id="@+id/button00"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -75,7 +76,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1">
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.example.tictactoe.views.TicTacToeButton
                     android:id="@+id/button01"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -96,7 +97,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1">
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.example.tictactoe.views.TicTacToeButton
                     android:id="@+id/button02"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -118,7 +119,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1">
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.example.tictactoe.views.TicTacToeButton
                     android:id="@+id/button10"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -139,7 +140,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1">
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.example.tictactoe.views.TicTacToeButton
                     android:id="@+id/button11"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -160,7 +161,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1">
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.example.tictactoe.views.TicTacToeButton
                     android:id="@+id/button12"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -182,7 +183,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1">
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.example.tictactoe.views.TicTacToeButton
                     android:id="@+id/button20"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -203,7 +204,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1">
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.example.tictactoe.views.TicTacToeButton
                     android:id="@+id/button21"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -224,7 +225,7 @@
                 android:layout_rowWeight="1"
                 android:layout_columnWeight="1">
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.example.tictactoe.views.TicTacToeButton
                     android:id="@+id/button22"
                     android:layout_width="0dp"
                     android:layout_height="0dp"

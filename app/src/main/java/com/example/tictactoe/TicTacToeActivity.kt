@@ -4,7 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tictactoe.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class TicTacToeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 

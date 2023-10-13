@@ -1,7 +1,8 @@
-package com.example.tictactoe
+package com.example.tictactoe.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.tictactoe.fragment.TicTacToeScreenFragment
 import com.example.tictactoe.databinding.ActivityMainBinding
 
 class TicTacToeActivity : AppCompatActivity() {

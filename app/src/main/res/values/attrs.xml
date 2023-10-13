@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TicTacToeButton">
+        <attr name="buttonColor" format="enum">
+<!--            for 0-->
+            <enum name="RED" value="1" />
+<!--            for x-->
+            <enum name="YELLOW" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,4 +1,4 @@
-package com.example.tictactoe
+package com.example.tictactoe.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,10 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.Button
+import com.example.tictactoe.view.TicTacToeButton.ButtonColor
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import com.example.tictactoe.R
 import com.example.tictactoe.databinding.FragmentFirstBinding
+import com.example.tictactoe.view.TicTacToeButton
 
 class TicTacToeScreenFragment : Fragment() {
 
@@ -98,6 +100,7 @@ class TicTacToeScreenFragment : Fragment() {
 
         for (button in buttons) {
             button.text = ""
+            button.buttonColor = ButtonColor.DEFAULT
         }
     }
 
@@ -114,7 +117,7 @@ class TicTacToeScreenFragment : Fragment() {
 
     //onClick function
     fun cellClicked(view: View) {
-        val button = view as Button
+        val button = view as TicTacToeButton
         //animation of pop up and down when clicked:
         button.let {
 
@@ -135,7 +138,13 @@ class TicTacToeScreenFragment : Fragment() {
 
         if (gameState[row][col] == 0) {
             gameState[row][col] = activePlayer
-            button.text = if (activePlayer == 1) "X" else "O"
+            if (activePlayer == 1) {
+                button.text = "X"
+                button.buttonColor = ButtonColor.YELLOW
+            } else {
+                button.text = "0"
+                button.buttonColor = ButtonColor.RED
+            }
 
             if (checkWinner()) {
                 Toast.makeText(context, "Player $activePlayer wins!", Toast.LENGTH_SHORT).show()

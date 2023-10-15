@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import com.example.tictactoe.view.TicTacToeButton.ButtonColor
+import com.example.tictactoe.view.EnumCodes.ButtonColor
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import com.example.tictactoe.R

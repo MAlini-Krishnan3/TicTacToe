@@ -15,7 +15,7 @@ class TicTacToeActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar)
+//        setSupportActionBar(binding.toolbar)
 
         if (savedInstanceState == null) {
             // Initial transaction to add the fragment

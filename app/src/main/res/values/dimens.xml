@@ -6,4 +6,5 @@
     <dimen name="tic_tac_toe_margin_top">10dp</dimen>
     <dimen name="tic_tac_toe_margin_bottom">50dp</dimen>
     <dimen name="heading_margin">100dp</dimen>
+    <dimen name="regular_font_cnr_weight_heading_bold">700</dimen>
 </resources>

@@ -5,11 +5,9 @@ import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.content.ContextCompat
 import com.example.tictactoe.R
+import com.example.tictactoe.view.EnumCodes.ButtonColor
 
 class TicTacToeButton : AppCompatButton {
-    enum class ButtonColor {
-        RED, YELLOW, DEFAULT
-    }
 
     var buttonColor: ButtonColor = ButtonColor.DEFAULT
         set(value) {
@@ -36,10 +34,9 @@ class TicTacToeButton : AppCompatButton {
     }
 
     private fun initializeButton(attrs: AttributeSet?) {
-//        val tf = ResourcesCompat.getFont(context, R.font.comic_neue_bold)
         val tf = resources.getFont(R.font.comic_neue_regular)
-        this.background = resources.getDrawable(R.drawable.button_3d)
         this.typeface = tf
+        this.setBackgroundDrawable(resources.getDrawable(R.drawable.button_3d))
         this.setTextColor(resources.getColor(R.color.white))
         attrs?.let {
             val typedArray = context.theme.obtainStyledAttributes(
@@ -74,7 +71,7 @@ class TicTacToeButton : AppCompatButton {
                     R.color.yellow
                 )
             ) // for X
-            ButtonColor.DEFAULT -> this.background = resources.getDrawable(R.drawable.button_3d)
+            ButtonColor.DEFAULT -> this.setBackgroundDrawable( resources.getDrawable(R.drawable.button_3d))
         }
     }
 

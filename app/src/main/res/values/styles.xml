@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomHeadingText">
+        <item name="android:textSize">@dimen/heading_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontWeight">@dimen/regular_font_cnr_weight_heading_bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>

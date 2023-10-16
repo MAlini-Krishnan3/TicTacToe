@@ -6,4 +6,10 @@
         <item name="android:fontWeight">@dimen/regular_font_cnr_weight_heading_bold</item>
         <item name="android:textColor">@color/white</item>
     </style>
+    <style name="TicTacToeButtonText">
+        <item name="android:textSize">@dimen/tic_tac_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontWeight">@dimen/regular_font_cnr_weight_heading_bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
 </resources>

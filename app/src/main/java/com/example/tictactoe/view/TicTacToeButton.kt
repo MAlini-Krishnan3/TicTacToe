@@ -36,6 +36,7 @@ class TicTacToeButton : AppCompatButton {
     private fun initializeButton(attrs: AttributeSet?) {
         val tf = resources.getFont(R.font.comic_neue_regular)
         this.typeface = tf
+        this.setTextAppearance(R.style.TicTacToeButtonText)
         this.setBackgroundDrawable(resources.getDrawable(R.drawable.button_3d))
         this.setTextColor(resources.getColor(R.color.white))
         attrs?.let {
@@ -71,7 +72,7 @@ class TicTacToeButton : AppCompatButton {
                     R.color.yellow
                 )
             ) // for X
-            ButtonColor.DEFAULT -> this.setBackgroundDrawable( resources.getDrawable(R.drawable.button_3d))
+            ButtonColor.DEFAULT -> setBackgroundDrawable(resources.getDrawable(R.drawable.button_3d))
         }
     }
 
